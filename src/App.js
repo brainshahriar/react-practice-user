@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Navmenu from './components/common/Navmenu'
+import { BrowserRouter } from 'react-router-dom'
+import AppRoute from './components/route/AppRoute'
 // import { Button } from 'bootstrap';
 
 
@@ -8,7 +9,9 @@ class App extends Component {
     return (
 
          <>
-          <Navmenu />
+          <BrowserRouter>
+          <AppRoute />
+          </BrowserRouter>
           </>
  
     )
