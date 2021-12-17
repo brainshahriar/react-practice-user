@@ -12,13 +12,25 @@ export class Addstudent extends Component {
     }
 handleInput = (e) => {
     this.setState({
-        [e.target.name]:e.target.value
+        [e.target.name]:e.target.value,
+        // [e.target.email]:e.target.value,
+        // [e.target.course]:e.target.value,
+        // [e.target.phone]:e.target.value,
     });
 }
 saveStudent =async (e) =>{
     e.preventDefault();
 
-    const res =await axios.post('/api/add-student',this.state)
+    const res =await axios.post('http://localhost:8000/api/add-student',this.state);
+    if(res.data.status === 200)
+    {
+        this.setState({
+            name:'',
+            email:'',
+            course:'',
+            phone:'',
+        });
+    }
 }
 
     render() {
@@ -36,7 +48,7 @@ saveStudent =async (e) =>{
                                 <form onSubmit={this.saveStudent}>
                                 <div className="form-group mb-3">
                                     <label>Student Name</label>
-                                    <input type="text" onChange={this.handleInput} name="" value={this.state.name} className="form-control"/>
+                                    <input type="text" onChange={this.handleInput} name="name" value={this.state.name} className="form-control"/>
                                 </div>
                                 <div className="form-group mb-3">
                                     <label>Course</label>
