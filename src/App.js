@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import AppRoute from './components/route/AppRoute'
+import AppRoute from './components/AppRoute'
+
 // import { Button } from 'bootstrap';
 
 
@@ -10,7 +11,7 @@ class App extends Component {
 
          <>
           <BrowserRouter>
-          <AppRoute />
+            <AppRoute />
           </BrowserRouter>
           </>
  
