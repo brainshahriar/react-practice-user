@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 
-export class Addstudent extends Component {
+export class Editstudent extends Component {
 
     state={
         name:'',
@@ -18,20 +18,26 @@ handleInput = (e) => {
         // [e.target.phone]:e.target.value,
     });
 }
-saveStudent =async (e) =>{
+
+componentDidMount(){
+    const stud_id=this.props.match.params.id;
+    // console.log(stud_id);
+}
+
+updateStudent =async (e) =>{
     e.preventDefault();
 
-    const res =await axios.post('http://localhost:8000/api/add-student',this.state);
-    if(res.data.status === 200)
-    {
-        console.log(res.data.message);
-        this.setState({
-            name:'',
-            email:'',
-            course:'',
-            phone:'',
-        });
-    }
+    // const res =await axios.post('http://localhost:8000/api/edit-student',this.state);
+    // if(res.data.status === 200)
+    // {
+    //     console.log(res.data.message);
+    //     this.setState({
+    //         name:'',
+    //         email:'',
+    //         course:'',
+    //         phone:'',
+    //     });
+    // }
 }
 
     render() {
@@ -42,11 +48,11 @@ saveStudent =async (e) =>{
                     <div className="col-md-6">
                         <div className="card">
                             <div className="card-header">
-                                <h4>Add Students</h4>
+                                <h4>Edit Students</h4>
                                 <Link to={'/'} className="btn btn-primary btn-sm float-end">Back</Link>
                             </div>
                             <div className="card-body">
-                                <form onSubmit={this.saveStudent}>
+                                <form onSubmit={this.updateStudent}>
                                 <div className="form-group mb-3">
                                     <label>Student Name</label>
                                     <input type="text" onChange={this.handleInput} name="name" value={this.state.name} className="form-control"/>
@@ -64,7 +70,7 @@ saveStudent =async (e) =>{
                                     <input type="text" onChange={this.handleInput} name="phone" value={this.state.phone} className="form-control"/>
                                 </div>
                                 <div className="form-group mb-3">
-                                        <button type='submit' className='btn btn-primary'>Save Student</button>
+                                        <button type='submit' className='btn btn-primary'>Update Student</button>
                                 </div>
                                 </form>
 
@@ -78,4 +84,4 @@ saveStudent =async (e) =>{
     }
 }
 
-export default Addstudent
+export default Editstudent
