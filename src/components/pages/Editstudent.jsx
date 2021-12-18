@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-// import axios from 'axios'
+import axios from 'axios';
 
 export class Editstudent extends Component {
 
@@ -19,9 +19,20 @@ handleInput = (e) => {
     });
 }
 
-componentDidMount(){
+async componentDidMount(){
     const stud_id=this.props.match.params.id;
     // console.log(stud_id);
+    // const res =await axios.get(`http://localhost:8000/api/edit-student/${stud_id}`);
+    const res =await axios.get(`http://localhost:8000/api/edit-student/${stud_id}`);
+    if(res.data.status===200)
+    {
+        this.setState({
+            name:res.data.student.name,
+            course:res.data.student.course,
+            email:res.data.student.email,
+            phone:res.data.student.phone,
+        });
+    }
 }
 
 updateStudent =async (e) =>{
