@@ -37,12 +37,17 @@ async componentDidMount(){
 
 updateStudent =async (e) =>{
     e.preventDefault();
+    document.getElementById('updatebtn').disabled=true;
+    document.getElementById('updatebtn').innerText="Updating";
+
     const stud_id=this.props.match.params.id;
 
     const res =await axios.put(`http://localhost:8000/api/update-student/${stud_id}`,this.state);
     if(res.data.status === 200)
     {
         console.log(res.data.message);
+        document.getElementById('updatebtn').disabled=false;
+        document.getElementById('updatebtn').innerText="Update Student";
         this.setState({
             name:'',
             email:'',
@@ -82,7 +87,7 @@ updateStudent =async (e) =>{
                                     <input type="text" onChange={this.handleInput} name="phone" value={this.state.phone} className="form-control"/>
                                 </div>
                                 <div className="form-group mb-3">
-                                        <button type='submit' className='btn btn-primary'>Update Student</button>
+                                        <button id="updatebtn" type='submit' className='btn btn-primary'>Update Student</button>
                                 </div>
                                 </form>
 

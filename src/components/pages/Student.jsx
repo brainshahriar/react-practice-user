@@ -19,6 +19,13 @@ class Student extends Component {
             });
         }
     }
+
+    deleteStudent =async (e, id) => {
+        const res =await axios.delete(`http://localhost:8000/api/delete-student/${id}`)
+        if(res.data.status===200){
+            console.log(res.data.message);
+        }
+    }
     render() {
 
         var student_HTMLTABLE="";
@@ -39,7 +46,7 @@ class Student extends Component {
                     <Link to={`edit-student/${item.id}`} className='btn btn-success btn-sm'>Edit</Link>
                     </td>
                     <td>
-                    <button className='btn btn-danger btn-sm'>Delete</button>
+                    <button onClick={(e)=>this.deleteStudent(e, item.id)} className='btn btn-danger btn-sm'>Delete</button>
                     </td>
                     </tr>
                 );
