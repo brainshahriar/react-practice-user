@@ -37,18 +37,19 @@ async componentDidMount(){
 
 updateStudent =async (e) =>{
     e.preventDefault();
+    const stud_id=this.props.match.params.id;
 
-    // const res =await axios.post('http://localhost:8000/api/edit-student',this.state);
-    // if(res.data.status === 200)
-    // {
-    //     console.log(res.data.message);
-    //     this.setState({
-    //         name:'',
-    //         email:'',
-    //         course:'',
-    //         phone:'',
-    //     });
-    // }
+    const res =await axios.put(`http://localhost:8000/api/update-student/${stud_id}`,this.state);
+    if(res.data.status === 200)
+    {
+        console.log(res.data.message);
+        this.setState({
+            name:'',
+            email:'',
+            course:'',
+            phone:'',
+        });
+    }
 }
 
     render() {
