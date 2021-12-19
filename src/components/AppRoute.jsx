@@ -12,7 +12,7 @@ class Approute extends Component {
            <Route exact path="/" component={Student}/>
            <Route exact path="/add-student" component={Addstudent} />
            <Route exact path="/edit-student/:id" component={Editstudent} />
-       </Switch>
+       </Switch>h1
        </>
         )
     }
