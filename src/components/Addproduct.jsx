@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { Component } from 'react'
 import { Button, Container, Form } from "react-bootstrap";
+import { toast, ToastContainer } from 'react-toastify';
 import AppUrl from '../api/AppUrl';
 import Validation from '../validation/Validation'
+import 'react-toastify/dist/ReactToastify.css';
 class Addproduct extends Component {
     constructor(){
         super();
@@ -31,17 +33,17 @@ class Addproduct extends Component {
         let sendbutton=document.getElementById('sendbtn');
         let reset=document.getElementById('reset');
         if(email.length===0){
-            alert('Please write email');
+            toast.error('Please write email');
         }
         else if(name.length===0)
         {
-            alert('plese write name');
+            toast.error('plese write name');
         }
         else if(phone.length===0){
-            alert('write number');
+            toast.error('write number');
         }
         else if(!(Validation.NameRegx).test(name)){
-            alert('Invalid');
+            toast.error('Invalid Name');
         }
         else{
             sendbutton.innerHTML='Submitted...';
@@ -53,18 +55,18 @@ class Addproduct extends Component {
             axios.post(AppUrl.storeDetails,formData)
             .then(function(response){
                 if(response.status===200 && response.data===1){
-                    alert("Submitted successfully");
-                    sendbutton.innerHTML='Submitt';
+                    toast.success("Submitted successfully");
+                    sendbutton.innerHTML='Submit';
                     reset.reset();
                 }
                 else{
-                    alert("error");
-                    sendbutton.innerHTML='Submitt';
+                    toast.error("error");
+                    sendbutton.innerHTML='Submit';
                 }
             })
             .catch(function(error){
-                alert(error);
-                sendbutton.innerHTML='Submitt';
+                toast.error(error);
+                sendbutton.innerHTML='Submit';
             });
 
         }
@@ -94,6 +96,7 @@ class Addproduct extends Component {
    </Button>
  </Form>
  </Container>
+ <ToastContainer/>
             </>
         )
     }
