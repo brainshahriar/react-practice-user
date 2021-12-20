@@ -28,6 +28,8 @@ class Addproduct extends Component {
         let email=this.state.email;
         let name=this.state.name;
         let phone=this.state.phone;
+        let sendbutton=document.getElementById('sendbtn');
+        let reset=document.getElementById('reset');
         if(email.length===0){
             alert('Please write email');
         }
@@ -42,6 +44,7 @@ class Addproduct extends Component {
             alert('Invalid');
         }
         else{
+            sendbutton.innerHTML='Submitted...';
             let formData = new FormData();
             formData.append("email",email)
             formData.append("name",name)
@@ -51,13 +54,17 @@ class Addproduct extends Component {
             .then(function(response){
                 if(response.status===200 && response.data===1){
                     alert("Submitted successfully");
+                    sendbutton.innerHTML='Submitt';
+                    reset.reset();
                 }
                 else{
                     alert("error");
+                    sendbutton.innerHTML='Submitt';
                 }
             })
             .catch(function(error){
                 alert(error);
+                sendbutton.innerHTML='Submitt';
             });
 
         }
@@ -69,7 +76,7 @@ class Addproduct extends Component {
         return (
             <>
              <Container>
-         <Form onSubmit={this.submitForm} >
+         <Form id="reset" onSubmit={this.submitForm} >
    <Form.Group className="mb-3" controlId="formBasicEmail">
      <Form.Label>Email address</Form.Label>
      <Form.Control onChange={this.emailOnchange} type="email" placeholder="Enter email" />
@@ -82,7 +89,7 @@ class Addproduct extends Component {
      <Form.Label>Phone</Form.Label>
      <Form.Control onChange={this.phoneOnchange} type="text" placeholder="Phone" />
    </Form.Group>
-   <Button variant="primary" type="submit">
+   <Button id="sendbtn" variant="primary" type="submit">
      Submit
    </Button>
  </Form>
