@@ -22,14 +22,18 @@ class Updateproduct extends Component {
 
         const ShowData=this.state.showdata;
         const View = ShowData.map((ShowData,i)=>{
-            return <div key={i.toString()}>
+            return (
+
+    
+            // <div key={i.toString()}>
                 <tr>
                 <td>{ShowData.id}</td>
                 <td>{ShowData.email}</td>
                 <td>{ShowData.name}</td>
                 <td>{ShowData.phone}</td>
                 </tr>
-            </div>
+                        )
+            // </div>
         });
 
         return (
