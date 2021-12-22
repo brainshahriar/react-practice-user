@@ -5,6 +5,7 @@ import Header from './Header';
 import Home from './Home';
 import Login from './Login';
 import Register from './Register';
+import Cards from './Cards';
 import Updateproduct from './Updateproduct';
 
 
@@ -19,6 +20,7 @@ class Approute extends Component {
            <Route exact path="/update" component={Updateproduct} />
            <Route exact path="/login" component={Login} />
            <Route exact path="/register" component={Register} />
+           <Route exact path="/card" component={Cards} />
        </Switch>
        </>
         )
