@@ -22,12 +22,8 @@ class Cards extends Component {
     const data=this.state.showdata;
     const View=data.map((data,i)=>{
       return(
-
         <Container>
-   
- 
-    <Row>
-    <Col>
+        <Row>
         <Card style={{ width: '18rem' }}>
 <Card.Img variant="top" src={data.image} />
 <Card.Body>
@@ -38,12 +34,8 @@ class Cards extends Component {
 <Button variant="primary">{data.name}</Button>
 </Card.Body>
 </Card>
-</Col>         
 </Row>
-
 </Container>
-
-
       )
 
     });
