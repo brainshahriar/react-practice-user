@@ -7,6 +7,7 @@ import Login from './Login';
 import Register from './Register';
 import Cards from './Cards';
 import Updateproduct from './Updateproduct';
+import Data from './Data';
 
 
 class Approute extends Component {
@@ -21,6 +22,7 @@ class Approute extends Component {
            <Route exact path="/login" component={Login} />
            <Route exact path="/register" component={Register} />
            <Route exact path="/card" component={Cards} />
+           <Route exact path="/data/:id" component={Data} />
        </Switch>
        </>
         )

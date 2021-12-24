@@ -23,16 +23,12 @@ class Cards extends Component {
     const data=this.state.showdata;
     const View=data.map((data,i)=>{
       return(
-
-    
-
-
         <Container>
         <Row>
         <Card style={{ width: '18rem' }}>
 <Card.Img variant="top" src={data.image} />
 <Card.Body>
-<Card.Title><Link to="/data"> {data.title}</Link></Card.Title>
+<Card.Title><Link to={"/data/"+data.id}> {data.title}</Link></Card.Title>
 <Card.Text>
 {data.description}
 </Card.Text>
