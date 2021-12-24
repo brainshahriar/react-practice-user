@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Card,Button, Container, Row, Col} from "react-bootstrap";
+import { Card,Button, Container, Row} from "react-bootstrap";
 import AppUrl from '../api/AppUrl';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 class Cards extends Component {
 
   constructor(){
@@ -22,12 +23,16 @@ class Cards extends Component {
     const data=this.state.showdata;
     const View=data.map((data,i)=>{
       return(
+
+    
+
+
         <Container>
         <Row>
         <Card style={{ width: '18rem' }}>
 <Card.Img variant="top" src={data.image} />
 <Card.Body>
-<Card.Title>{data.title}</Card.Title>
+<Card.Title><Link to="/data"> {data.title}</Link></Card.Title>
 <Card.Text>
 {data.description}
 </Card.Text>
@@ -36,6 +41,11 @@ class Cards extends Component {
 </Card>
 </Row>
 </Container>
+
+
+
+
+
       )
 
     });
