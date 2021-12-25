@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Col, Container, Row,Card} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
  class Featureproduct extends Component {
     render() {
@@ -13,6 +14,7 @@ import { Col, Container, Row,Card} from 'react-bootstrap'
 
           <Row>
      <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+     <Link to="/productdetails">
      <Card className="image-box card">
           <img alt="" className="center" src="https://rukminim1.flixcart.com/image/416/416/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70" />   
           <Card.Body> 
@@ -21,6 +23,7 @@ import { Col, Container, Row,Card} from 'react-bootstrap'
 
           </Card.Body>
           </Card>
+          </Link>
      </Col>
 
 
