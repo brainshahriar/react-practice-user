@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Footer from '../components/common/Footer'
 import Navmenu from '../components/common/Navmenu'
 import Categories from '../components/home/Categories'
 import Collection from '../components/home/Collection'
@@ -18,6 +19,7 @@ class Homepage extends Component {
             <Newarrival/>
             <Collection/>
             <Categories/>
+            <Footer/>
             </>
         )
     }
