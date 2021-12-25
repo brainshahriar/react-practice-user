@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/my-app/static/css/main.7b814e82.css",
+    "main.js": "/my-app/static/js/main.9ca90dbb.js",
+    "static/js/651.19f8b655.chunk.js": "/my-app/static/js/651.19f8b655.chunk.js",
+    "static/media/product4.png": "/my-app/static/media/product4.88b4545f307f6ae8cad5.png",
+    "static/media/product1.png": "/my-app/static/media/product1.4ebbff274c9464bfa861.png",
+    "static/media/login.png": "/my-app/static/media/login.067c90a2bf1ca8af6d7a.png",
+    "static/media/product2.png": "/my-app/static/media/product2.4e088c71730a03ffffa5.png",
+    "static/media/product3.png": "/my-app/static/media/product3.1b143c3e0de9b90daca7.png",
+    "static/media/slick.svg": "/my-app/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/my-app/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/my-app/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/my-app/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/my-app/index.html",
+    "main.7b814e82.css.map": "/my-app/static/css/main.7b814e82.css.map",
+    "main.9ca90dbb.js.map": "/my-app/static/js/main.9ca90dbb.js.map",
+    "651.19f8b655.chunk.js.map": "/my-app/static/js/651.19f8b655.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b814e82.css",
+    "static/js/main.9ca90dbb.js"
+  ]
+}
