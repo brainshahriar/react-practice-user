@@ -12,7 +12,8 @@ import {Link} from "react-router-dom";
 <Container fluid={"true"} className="fixed-top shadow-sm p-2 mb-0 bg-white">
          <Row>
               <Col lg={4} md={4} sm={12} xs={12}>
-              <Link to="/"> <img alt='' className="nav-logo" src="https://www.kindpng.com/picc/m/40-408570_simple-drawing-batman-logo-small-hd-png-download.png" /> </Link>
+              <Link to="/"> <h1>Logo</h1>  </Link>
+              {/* <img alt='' className="nav-logo" src="https://www.kindpng.com/picc/m/40-408570_simple-drawing-batman-logo-small-hd-png-download.png" /> */}
               </Col>
 
               <Col className="p-1 mt-1" lg={4} md={4} sm={12} xs={12}>
