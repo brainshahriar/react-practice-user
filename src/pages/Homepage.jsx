@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import Featureproduct from '../components/home/Featureproduct'
 
 class Homepage extends Component {
     render() {
         return (
             <>
-            <h1>Hello</h1>
+            <Featureproduct/>
             </>
         )
     }
