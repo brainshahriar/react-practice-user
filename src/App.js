@@ -8,7 +8,6 @@ import AppRoute from './components/AppRoute'
 class App extends Component {
   render() {
     return (
-
          <>
           <BrowserRouter>
             <AppRoute />

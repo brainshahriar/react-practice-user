@@ -32,7 +32,6 @@ class Data extends Component {
                 </h1>
                 </>
             </div>
-            div not commit -n
         )
     }
 }
