@@ -52,13 +52,13 @@ class Homeslider extends Component {
 
 <Slider {...settings}>
           <div>
-           <img alt='' className="slider-img" src="" />
+           <img alt='' className="slider-img" src="https://soliloquywp.com/wp-content/uploads/2018/11/nb_ist_cover.jpg" />
           </div>
           <div>
-          <img alt='' className="slider-img" src="" />
+          <img alt='' className="slider-img" src="https://smartslider3.com/wp-content/uploads/2019/05/sliderimages-780x410.png" />
           </div>
           <div>
-          <img alt='' className="slider-img" src="" />
+          <img alt='' className="slider-img" src="https://wowslider.com/sliders/demo-77/data1/images/road220058.jpg" />
           </div>
 
         </Slider>
