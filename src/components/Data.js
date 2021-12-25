@@ -15,7 +15,6 @@ class Data extends Component {
         axios.get(AppUrl.details(this.state.id)).then(response=>{
             this.setState({Details:response.data});
         }).catch(error=>{
-    
         })
     }
     render() {
@@ -33,6 +32,7 @@ class Data extends Component {
                 </h1>
                 </>
             </div>
+            div not commit -n
         )
     }
 }
