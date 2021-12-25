@@ -29,8 +29,7 @@ import {Link} from "react-router-dom";
                    </Link>
                    <button className="btn"><i className="fa h4 fa-mobile-alt"></i></button>
                    <Link to="/login" className="h4 btn">LOGIN</Link>
-
-                   <Button className="cart-btn"><i className="fa fa-shopping-cart"></i> 3 Items </Button>
+                   <Link to="/cartpage" className="cart-btn"><i className="fa fa-shopping-cart"></i> 3 Items </Link>
               </Col>
 
          </Row>

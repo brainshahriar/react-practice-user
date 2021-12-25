@@ -1,23 +1,22 @@
 import React, { Component } from 'react'
+import Cart from '../components/Cart/Cart'
 import Footer from '../components/common/Footer'
 import Navmenu from '../components/common/Navmenu'
-import Productdetails from '../components/productdetails/Productdetails';
 
-export class Productdetailspage extends Component {
-    componentDidMount(){
-        window.scroll(0,0)
-   }
+class Cartpage extends Component {
     render() {
+
+        
         return (
             <>
             <div className='Desktop'>
             <Navmenu />
             </div>
-            <Productdetails/>
+            <Cart/>
             <Footer/>
             </>
         )
     }
 }
 
-export default Productdetailspage
+export default Cartpage
