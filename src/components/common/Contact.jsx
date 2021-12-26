@@ -86,7 +86,7 @@ class Contact extends Component {
 
                     <Row className="text-center">
              <Col className="d-flex justify-content-center" md={6} lg={6} sm={12} xs={12}>
-     <Form onSubmit={this.form} className="onboardForm">
+     <Form id="reset" onSubmit={this.form} className="onboardForm">
           <h4 className="section-title-login">CONTACT WITH US </h4>
           <h6 className="section-sub-title">Please Contact With Us </h6>
           <input onChange={this.onNumber} className="form-control m-2"  type="text" placeholder="Enter Mobile Number" />
