@@ -20,7 +20,7 @@ class Addproduct extends Component {
     }
     nameOnchange=(e)=>{
         let name = e.target.value;
-        this.setState({name:name})
+        this.setState({name:name}) 
     }
     phoneOnchange=(e)=>{
         let phone = e.target.value;
@@ -78,7 +78,7 @@ class Addproduct extends Component {
         return (
             <>
              <Container>
-         <Form id="reset" onSubmit={this.submitForm} >
+         <Form  id="reset" onSubmit={this.submitForm} >
    <Form.Group className="mb-3" controlId="formBasicEmail">
      <Form.Label>Email address</Form.Label>
      <Form.Control onChange={this.emailOnchange} type="email" placeholder="Enter email" />

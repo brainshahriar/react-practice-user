@@ -4,6 +4,7 @@ import Productdetailspage from '../pages/Productdetailspage';
 import Homepage from '../pages/Homepage';
 import Loginpage from '../pages/Loginpage'
 import Cartpage from '../pages/Cartpage';
+import Contactpage from '../pages/Contactpage';
 
 
 
@@ -16,6 +17,7 @@ class Approute extends Component {
        <Route exact path="/login" component={Loginpage} />
        <Route exact path="/productdetails" component={Productdetailspage} />
        <Route exact path="/cartpage" component={Cartpage} />
+       <Route exact path="/contact" component={Contactpage} />
        </Switch>
        </>
         )

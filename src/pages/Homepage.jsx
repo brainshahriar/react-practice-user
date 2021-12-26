@@ -8,9 +8,7 @@ import Hometop from '../components/home/Hometop'
 import Newarrival from '../components/home/Newarrival'
 
 class Homepage extends Component {
-    render() {
-
-        
+    render() {      
         return (
             <>
             <Navmenu />
