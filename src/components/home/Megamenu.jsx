@@ -7,9 +7,7 @@ class Megamenu extends Component {
         this.MegaMenu = this.MegaMenu.bind(this);
    }
 
-   componentDidMount(){
-        this.MegaMenu();
-   }
+
 
 
 

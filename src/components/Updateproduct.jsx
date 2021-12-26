@@ -11,7 +11,7 @@ class Updateproduct extends Component {
             showdata:[]
         }
     }
-    componentDidMount(){
+    componentDidMount(){ 
         axios.get(AppUrl.showDetails).then(response=>{
             this.setState({showdata:response.data});
         }).catch(error=>{

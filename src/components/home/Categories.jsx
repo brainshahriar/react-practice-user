@@ -1,8 +1,30 @@
 import React, { Component } from 'react'
 import { Container,Card,Col,Row } from 'react-bootstrap'
+import AppUrl from '../../api/AppUrl';
+import axios from 'axios'
 
 class Categories extends Component {
+     constructor(){
+          super();
+          this.state={
+               showdata:[]
+          }
+          
+     }
+     componentDidMount(){
+          axios.get(AppUrl.Categoryall).then(response=>{
+              this.setState({showdata:response.data});
+          }).catch(error=>{
+  
+          })
+      }
     render() {
+     const ShowData=this.state.showdata;
+     const View=ShowData.map((showdata,i)=>{
+          return (
+                    <h1>hello</h1>
+          )
+     });
         return (
             <>
             <Container>
