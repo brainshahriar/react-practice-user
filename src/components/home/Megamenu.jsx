@@ -30,8 +30,17 @@ class Megamenu extends Component {
                            </button>
                   <div className="panel">
                        <ul>
-                            <li><a href="#" className="accordionItem" > Mans Tshirt 1</a></li>
-                            <li><a href="#" className="accordionItem" > Mans Tshirt 2</a></li>
+
+                              {
+                                   (Catlist.subcategory_name).map((Sublist,i)=>{
+                                        return <li><a href="#" className="accordionItem" >{Sublist.subcategory_name}</a></li>
+                                   })
+                              }
+
+
+
+
+                            
                        </ul>
                   </div>
                   </div>
