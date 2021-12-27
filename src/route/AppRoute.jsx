@@ -15,7 +15,7 @@ class Approute extends Component {
        <Switch>
        <Route exact path="/" component={Homepage} />
        <Route exact path="/login" component={Loginpage} />
-       <Route exact path="/productdetails" component={Productdetailspage} />
+       <Route exact path="/productdetails/:id" component={Productdetailspage} />
        <Route exact path="/cartpage" component={Cartpage} />
        <Route exact path="/contact" component={Contactpage} />
        </Switch>
